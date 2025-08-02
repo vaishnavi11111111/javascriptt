@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>11g</title>
+    </head>
+    <style>
+        
+    </style>
+    <body>
+    
+        <script>
+            let num = [1,2,3,4]
+            let result = [];
+            for(let i = 0; i<= num.length - 1;i++){
+                result.push(num[i]+1);
+            }
+            console.log(result)
+
+            function addOne(array){
+                let result = [];
+                for(let i = 0; i<= array.length - 1;i++){
+                    result.push(array[i]+1);
+                }
+                console.log(result)
+            }
+            addOne([1,2,3,4]);
+            addOne([-2,-1,0,99])
+
+            function addNum(array,num){
+                let result = [];
+                for(let i = 0; i<= array.length - 1;i++){
+                    result.push(array[i]+num);
+                }
+                console.log(result)
+            }
+            addNum([-2,-1,0,99],7666)
+
+            function addArrays(array1,array2){
+                let result = [];
+                for(let i = 0; i<= array1.length - 1;i++){
+                    result.push(array1[i]+array2[i]);
+                }console.log(result)
+            }
+
+            addArrays([-2,-1,0,99],[-6,8,666,9])
+
+            function countPositive(nums){
+                let count = 0;
+                for(let i = 0; i<= nums.length - 1;i++){
+                    if(nums[i]>0){
+                        count+=1
+                    }
+                } console.log(count);
+            }
+
+            countPositive([-6,8,666,9]);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>objects</title>
+    </head>
+    <body>
+    
+        <script>
+            const cat = {
+            name: "Mochi",
+            age: 3,
+            isCute: true,
+            meow: function() {
+                console.log("meow~");
+            }
+            };
+
+            console.log(cat.name); // "Mochi"
+            console.log(cat["age"]); // 3
+            cat.meow(); // "meow~"
+            
+            console.log(JSON.stringify(cat));
+
+        </script>
+    </body>
+</html>

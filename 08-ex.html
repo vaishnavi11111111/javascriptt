@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>objects</title>
+    </head>
+    <body>
+    
+        <script>
+            const product1 = {
+                name: 'Basketball',
+                price: 2095,
+            }
+            const product2 = {
+                name: 'Football',
+                price: 1595,
+            }
+            
+            function compareProducts(product1,product2){
+                let affordable = '';
+                if (product1.price > product2.price){
+                    affordable = product2;
+                } else {
+                    affordable = product1;
+                }
+                return affordable;
+            }
+
+            function isSameProducts(product1,product2){
+                if (product1.name === product2.name && product1.price ===product2.price){
+                    return true;
+                } else{
+                    return false;
+                }
+            }
+
+            let str = 'far apart '
+            console.log(str.repeat(99));
+            console.log(isSameProducts(product1,product2));
+            console.log(compareProducts(product1,product2));
+        </script>
+    </body>
+</html>

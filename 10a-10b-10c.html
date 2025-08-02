@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>buttons</title>
+        <style>
+            .cart{
+                display: block;
+                margin-bottom: 50px;
+                color: black;
+                background-color: rgb(255,216,20);
+                padding: 5px 40px;
+                border: none;
+                border-radius: 30px;
+                cursor:pointer;
+            }
+
+            .uber-request{
+                color: white;
+                background-color: black;
+                font-weight: bold;
+                padding: 10px 18px;
+                border-radius: 5px;
+                border: none;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+
+            .uber-later{
+                color: black;
+                background-color: rgb(230,230,230);
+                font-weight: bold;
+                padding: 10px 18px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button class="cart">Add to Cart</button>
+
+        <button class="uber-request">Request now</button>
+        <button class="uber-later schedule-later">Schedule for later</button>
+        
+    </body>
+    <script>
+        const buttonElement = document.querySelector('.uber-later');
+        console.log(buttonElement.classList.contains('uber-later'));
+    </script>
+</html>

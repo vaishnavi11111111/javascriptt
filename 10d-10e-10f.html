@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex-10</title>
+    </head>
+    <style>
+        .btn{
+            background-color: lightgray;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .is-toggled{
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <body>
+        <button onclick=" 
+        toggle(this)  
+        " class="btn">Gaming</button>
+
+        <button onclick=" 
+        toggle(this)
+        " class="btn">Music</button>
+
+        <button onclick="toggle(this)" 
+                class="btn">Tech</button>
+        <script>
+            function toggle(el){
+                if (el.classList.contains('is-toggled')){
+            el.classList.remove('is-toggled')}
+            else {
+                el.classList.add('is-toggled')
+            }
+            }
+        </script>
+    </body>
+</html>

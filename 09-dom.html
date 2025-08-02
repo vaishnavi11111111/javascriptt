@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <button>why</button>
+        <button class="idk-bruh">waun</button>
+        <script>
+            console.log(document.querySelector('button').innerHTML);
+            document.querySelector('button').innerHTML = 'changed';
+            console.log(document.querySelector('button').innerHTML);
+
+            console.log(document.querySelector('.idk-bruh'))
+            
+            const buttonElement = document.querySelector('.idk-bruh');
+            console.log(buttonElement);
+            /*console.log(document.title);
+            document.title = 'Changed';
+
+            console.log(document.body);
+            console.log(typeof document.body);
+
+            console.log(document.body.innerHTML);
+            document.body.innerHTML = '<button>Good job!</button>';*/
+      
+        </script>
+    </body>
+</html>

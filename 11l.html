@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>11l</title>
+    </head>
+    <style>
+        
+    </style>
+    <body>
+    
+        <script>
+            function minMax(nums) {
+            // We'll set the starting values of min and max
+            // to null this time.
+            const result = {
+            min: null,
+            max: null
+            };
+
+            for (let i = 0; i < nums.length; i++) {
+            const value = nums[i];
+
+            // If the min is null OR the value is
+            // less than the min, update the min.
+            if (result.min === null || value < result.min) {
+                result.min = value;
+            }
+
+            // If the max is null OR the value is
+            // greater than the max, update the max.
+            if (result.max === null || value > result.max) {
+                result.max = value;
+            }
+
+            // We have to use 2 if-statements above instead of
+            // an if-else statement. This makes sure both the
+            // min and max are set if they are null.
+            }
+
+            return result;
+        }
+        
+            
+        function countWords(words) {
+            const result = {};
+
+            for (let i = 0; i < words.length; i++) {
+            const word = words[i];
+
+            // result[word] adds/accesses a property using whatever is
+            // saved inside the 'word' variable.
+            // If word = 'apple', result[word] will do result['apple']
+            // If word = 'grape', result[word] will do result['grape']
+            if (!result[word]) {
+                result[word] = 1;
+            } else {
+                result[word]++;
+            }
+            }
+
+            return result;
+        }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+        </script>
+    </body>
+</html>

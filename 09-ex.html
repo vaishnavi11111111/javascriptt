@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM exercise</title>
+    </head>
+    <body>
+        <div style="margin-bottom: 100px;">
+            <button class="btn1">9a</button>
+            <button class="btn2">9b</button>
+        </div>
+        <div style="margin-bottom: 100px;">
+            <button onclick="document.querySelector('p').innerHTML = 'You chose: heads'">heads</button>
+            <button onclick="document.querySelector('p').innerHTML = 'You chose: tails'">tails</button>
+            <p></p>
+        </div>
+        <div>
+            <input placeholder="Name" class="name"
+                onkeydown="
+                    if (event.key === 'Enter'){
+                        displayName()
+                    }">
+            <button onclick="
+                displayName()
+            ">Submit</button>
+            <p class="idk"></p> 
+        </div>
+       
+        <script>
+            function displayName(){
+                let name = document.querySelector('.name').value;
+                document.querySelector('.idk').innerHTML = `Your name is: ${name}`;
+            }
+
+            console.log(document.querySelector('.btn1'));
+            document.querySelector('.btn2').innerHTML = '9b done!';
+        </script>
+    </body>
+</html>

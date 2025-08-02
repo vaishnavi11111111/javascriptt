@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>to do list</title>
+    </head>
+    <style>
+        
+    </style>
+    <body>
+        <p>Todo List Practice 1</p>
+        <input class="input-todo" placeholder="Todo name">
+        <button onclick="getInputValue()">Add</button>
+        <div class="js-todolist">
+
+        </div>
+
+        <script>
+            let toDoArray = ['go gym', 'study js', 'read 72nd street'];
+
+            renderTodoList();
+
+            function getInputValue(){
+                const inputToDo = document.querySelector('.input-todo').value;
+                toDoArray.push(inputToDo);
+                console.log(toDoArray);
+
+                document.querySelector('.input-todo').value = '';
+                renderTodoList();
+            }
+
+            function renderTodoList(){
+                let todoListHTML = '';
+                for(let i = 0;i<toDoArray.length; i++){
+                    const todo = toDoArray[i];
+                    const html = `<p>${todo}</p>`;
+                    todoListHTML += html;
+                }
+                console.log(todoListHTML);
+                document.querySelector('.js-todolist')
+                    .innerHTML = todoListHTML;
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            
+            body{
+                background-color: black;
+            }
+
+            .grey-btn{
+                color: white;
+                background-color: rgb(51, 51, 51);
+                border: none;
+                border-radius: 100px;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;  
+                font-size: 25px;  
+                cursor: pointer;
+                        }
+            .grey-btn-1{
+                color: white;
+                background-color: rgb(51, 51, 51);
+                border: none;
+                border-radius: 100px;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;  
+                font-size: 15px;  
+                cursor: pointer;
+                        }
+
+            
+            .orng-btn{
+                color: white;
+                background-color: rgb(254, 160, 10);
+                border: none;
+                border-radius: 100px;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;  
+                font-size: 25px;  
+                cursor: pointer;
+                        }
+
+            .display-calc{
+                color: white;
+                font-size: 40px;
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p class="display-calc"></p>
+        <div style="margin-top: 10px;">
+            <button onclick="updateCalculation('1')" class="grey-btn">1</button>
+            <button onclick="updateCalculation('2')" class="grey-btn">2</button>
+            <button onclick="updateCalculation('3')" class="grey-btn">3</button>
+            <button onclick="updateCalculation(' + ')" class="orng-btn">+</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <button onclick="updateCalculation('4')" class="grey-btn">4</button>
+            <button onclick="updateCalculation('5')" class="grey-btn">5</button>
+            <button onclick="updateCalculation('6')" class="grey-btn">6</button>
+            <button onclick="updateCalculation(' - ')" class="orng-btn">-</button>
+        </div>
+        <div style="margin-top: 10px;">
+            <button onclick="updateCalculation('7')" class="grey-btn">7</button>
+            <button onclick="updateCalculation('8')" class="grey-btn">8</button>
+            <button onclick="updateCalculation('9')" class="grey-btn">9</button>
+            <button onclick="updateCalculation(' * ')" class="orng-btn">*</button>
+            
+        </div>
+        <div style="margin-top: 10px;">
+            <button onclick="updateCalculation('0')" class="grey-btn">0</button>
+            <button onclick="updateCalculation('.')" class="grey-btn">.</button>
+            <button onclick="updateCalculation('eval')" class="grey-btn">=</button>
+            <button onclick="updateCalculation(' / ')" class="orng-btn">/</button>
+        </div>
+        <button style="margin-top: 10px;" onclick = "updateCalculation('clear')" class="grey-btn-1">clear</button>
+        <script>
+            let calculation = localStorage.getItem("calculation") || '';
+
+            displayCalculation()
+            
+            function updateCalculation(value){
+                if (value === 'eval'){
+                    calculation = eval(calculation);
+                    console.log(calculation);
+                } else if (value === 'clear'){
+                    calculation = '';
+                } else {
+                    calculation+=value;
+                    console.log(calculation)
+                }
+                localStorage.setItem("calculation",calculation);
+                displayCalculation()
+            }
+            
+            function displayCalculation(){
+                document.querySelector('.display-calc')
+                .innerHTML = calculation;
+            }
+
+            displayCalculation()
+        </script>
+    </body>
+</html>

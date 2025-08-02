@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>booleans-exercise</title>
+    </head>
+    <body>
+        
+        <script>
+            /*
+            exercise 1
+            */
+            let hour = 20;
+            let name = 'vaishnavi';
+            if (hour>=6 && hour<12) {
+                console.log(`Good Morning ${name}!`)
+            } else if (hour>=12 && hour<17) {
+                console.log(`Good Evening ${name}!`)
+            } else {
+                console.log(`Good night ${name}!`)
+            }
+
+            /*
+            exercise 2
+            */
+            let age = 2;
+            const holiday = true;
+            if ((age<=6 || age>=65) && holiday!= true){
+                console.log('discount!')
+            } else {
+                console.log('no discount :(')
+            }
+
+            /*
+            exercise 3
+            */
+            let randomNumber = Math.random();
+            let result;
+            const guess = 'heads';
+            if (randomNumber< 0.5){
+                result = 'heads'
+            } else{
+                result = 'tails.'
+            }
+            /* or
+            result = randomNumber < 0.5 ? console.log('u win.'): console.log('u lose.');
+            */
+            
+            if (guess === result){
+                console.log('u win.')
+            } else{
+                console.log('u lose')
+            }
+            /* or
+            guess === result ? console.log('u win') : console.log('u lose');
+            */
+            
+        </script>
+    </body>
+</html>

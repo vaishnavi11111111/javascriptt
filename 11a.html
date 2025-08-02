@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>to do list</title>
+    </head>
+    <style>
+        
+    </style>
+    <body>
+    
+        <script>
+            
+
+            let kk = [10,20,30,40];
+            arraySwap(kk);
+            getLastValue(kk);
+            
+
+            function getLastValue(array){
+                const lastIndex = array.length - 1;            
+                console.log(array[lastIndex]);}
+
+            function arraySwap(array){
+                newArray = array;
+                const lastIndex = array.length - 1;
+                const firstElement = newArray[0];
+                const lastElement = newArray[lastIndex];
+
+                newArray[0] = lastElement;
+                newArray[lastIndex] = firstElement;
+                console.log(newArray)
+            }
+            
+        </script>
+    </body>
+</html>
